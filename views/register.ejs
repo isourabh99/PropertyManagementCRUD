@@ -1,0 +1,27 @@
+<%-include("partials/header")%>
+<%-include("partials/nav")%>
+<div class="w-screen h-screen  ">
+
+    <form action="/register" method="post" class="w-[50vw] h-[50vh] mt-[20vh] p-10" enctype="multipart/form-data">
+        <h1 class="text-4xl capitalize mb-10">register you property here...</h1>
+        <!-- <input type="text" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"
+            placeholder="Enter image url" name="imgURL"> -->
+            <input type="file" name="img">
+        <input type="text" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"
+            placeholder="Enter property Title" name="propertyName">
+        <input type="text" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"
+            placeholder="Enter owner's Name" name="ownerName">
+        <input type="text" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"
+            placeholder="Type of property ( 1BHK 2BHK 3BHK 4BHK Duplex Bunglow )  " name="typeofproperty">
+        <input type="text" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"
+            placeholder="Enter contact info" name="contact">
+        <input type="text" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none" placeholder="Enter address"
+            name="address">
+        <input type="number" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none" placeholder="Enter price"
+            name="price">
+        <textarea name="description" id="" placeholder="Describe your property.."
+            class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"></textarea>
+        <button class="bg-neutral-600 px-4 py-2 rounded hover:bg-neutral-700">Submit</button>
+    </form>
+</div>
+<%-include("partials/footer")%>

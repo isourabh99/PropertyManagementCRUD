@@ -1,0 +1,25 @@
+<%-include("partials/header")%>
+<%-include("partials/nav")%>
+<div class="min-h-[90vh] w-[100vw]  px-8  mt-[10vh]">
+   <div class="flex  h-[90vh] w-full">
+<div class="w-1/2  h-full items-center flex">
+    <img src="<%=singleProperty.imgURL%>" alt="">
+</div>
+<div class="w-1/2  h-[90vh] p-16 ">
+   <h1 class="text-6xl text-center"><%=singleProperty.propertyName%></h1>
+   <br>
+   <h1 class="text-3xl italic text-neutral-500">Property Details</h1>
+   <h1 class="text-4xl mt-4 text-neutral-400"><span class="text-white">Owner - </span><%=singleProperty.ownerName%></h1>
+   <h1 class="text-2xl mt-4 text-neutral-400"><span class="text-white">Contact - </span><%=singleProperty.contact%></h1>
+   <h1 class="text-2xl mt-4 text-neutral-400"><span class="text-white">Address - </span><%=singleProperty.address%></h1>
+   <h1 class="text-2xl mt-4 text-neutral-400"><span class="text-white">Type - </span><%=singleProperty.typeofproperty%></h1>
+   <h1 class="text-2xl mt-4 text-green-400"><span class="text-white">Price - </span><%=singleProperty.price%> INR</h1>
+   <h1 class="text-xl mt-4 text-neutral-400 italic mb-14"><span class="text-white text-4xl non-italic">Description - </span><%=singleProperty.description%></h1>
+   <a href="/update/<%=singleProperty._id%>" class="bg-yellow-300 px-4 py-2 text-black mr-10 rounded">Update</a>
+   <a href="/delete/<%=singleProperty._id%>" class="bg-red-400 px-4 py-2 text-black rounded">Delete</a>
+</div>
+   </div>
+
+  
+</div>
+<%-include("partials/footer")%>

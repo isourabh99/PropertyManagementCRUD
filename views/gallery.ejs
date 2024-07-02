@@ -1,0 +1,20 @@
+<%-include("partials/header")%>
+<%-include("partials/nav")%>
+<div class="min-h-[90vh] w-[100vw] py-[20vh] px-8 ">
+<h1 class="text-5xl mb-20">All properties</h1>
+<div class="min-h-[90vh] w-full flex  items-center flex-row  gap-20  flex-wrap">
+    <%property.forEach((eachproperty)=>{%>
+    <div class="h-[65vh] w-[20vw] bg-neutral-800 rounded-md p-2">
+        <img src="/images/uploads/<%=eachproperty.img%>" alt="" class="w-[20vw] h-[30vh] object-center rounded mb-10">
+<h1 class="text-2xl text-neutral-300 mb-2"><%=eachproperty.propertyName%></h1>
+<h1 class="text-xl text-neutral-500 mb-2"><%=eachproperty.ownerName%></h1>
+<!-- <h1 class="text-xl text-lime-700 mb-6"><%=eachproperty.contact%>/h1> -->
+<h1 class="text-xl text-blue-400 mb-6"><%=eachproperty.typeofproperty%></h1>
+<h1 class="text-xl text-lime-400 mb-10">Price -<%=eachproperty.price%> INR</h1>
+<a href="/explore/<%=eachproperty._id%>" class="bg-neutral-700 px-3 py-2 text-neutral-400  hover:bg-neutral-600 ">Explore more</a>
+    </div>
+    <%})%>
+
+</div>
+</div>
+<%-include("partials/footer")%>

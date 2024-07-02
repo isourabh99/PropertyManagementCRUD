@@ -1,0 +1,26 @@
+<%-include("partials/header")%>
+<%-include("partials/nav")%>
+<div class="w-screen h-screen  ">
+
+    <form action="/update/<%=updateProperty._id%>" method="post" class="w-[50vw] h-[50vh] mt-[20vh] p-10">
+        <h1 class="text-4xl capitalize mb-10">register you property here...</h1>
+        <input value="<%=updateProperty.imgURL%>" type="text" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"
+            placeholder="Enter image url" name="imgURL">
+        <input value="<%=updateProperty.propertyName%>" type="text" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"
+            placeholder="Enter property Title" name="propertyName">
+        <input value="<%=updateProperty.ownerName%>" type="text" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"
+            placeholder="Enter owner's Name" name="ownerName">
+        <input value="<%=updateProperty.typeofproperty%>" type="text" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"
+            placeholder="Type of property ( 1BHK 2BHK 3BHK 4BHK Duplex Bunglow )  " name="typeofproperty">
+        <input value="<%=updateProperty.contact%>" type="text" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"
+            placeholder="Enter contact info" name="contact">
+        <input value="<%=updateProperty.address%>" type="text" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"
+            placeholder="Enter address" name="address">
+        <input value="<%=updateProperty.price%>" type="number" class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"
+            placeholder="Enter price" name="price">
+        <textarea name="description" id="" placeholder="Describe your property.."
+            class="bg-neutral-800 px-3 py-2 text-2xl w-full rounded-md mb-4 outline-none"><%=updateProperty.description%></textarea>
+        <button class="bg-neutral-600 px-4 py-2 rounded hover:bg-neutral-700">Submit</button>
+    </form>
+</div>
+<%-include("partials/footer")%>
