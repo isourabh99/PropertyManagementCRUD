@@ -1,6 +1,31 @@
 <%-include("partials/header")%>
-<%-include("partials/nav")%>    
+<%-include("partials/nav")%>
 <div class="px-10 bg-neutral-900 py-10 min-h-screen">
 
- </div>
+
+    <div class="min-h-[90vh] w-[100vw] py-[20vh] px-8">
+        <h1 class="text-5xl mb-20">Contact Us</h1>
+        <form action="/contact" method="post" class="space-y-8 w-1/2">
+            <div class="">
+                <label for="name" class="block text-xl font-medium text-neutral-300">Name</label>
+                <input type="text" name="name" id="name" required
+                    class="w-full px-4 py-2 mt-2 text-neutral-800 bg-neutral-700 border border-neutral-600 rounded-md focus:outline-none focus:border-blue-400 ">
+            </div>
+            <div>
+                <label for="email" class="block text-xl font-medium text-neutral-300">Email</label>
+                <input type="email" name="email" id="email" required
+                    class="w-full px-4 py-2 mt-2 text-neutral-800 bg-neutral-700 border border-neutral-600 rounded-md focus:outline-none focus:border-blue-400 ">
+            </div>
+            <div>
+                <label for="message" class="block text-xl font-medium text-neutral-300">Message</label>
+                <textarea name="message" id="message" rows="5" required
+                    class="w-full px-4 py-2 mt-2 text-neutral-800 bg-neutral-700 border border-neutral-600 rounded-md focus:outline-none focus:border-blue-400 "></textarea>
+            </div>
+            <button type="submit" class="px-4 py-2 text-neutral-400 bg-green-700 rounded-md hover:bg-green-600">Send
+                Message</button>
+        </form>
+    </div>
+
+
+</div>
 <%-include("partials/footer")%>

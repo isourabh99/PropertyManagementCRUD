@@ -1,29 +1,3 @@
-// const nodemailer = require("nodemailer");
-
-// exports.sendmail = async (req, res) => {
-//     console.log(req.body.email);
-//     const transporter = nodemailer.createTransport({
-//         service: "gmail",
-//         auth: {
-//             user: process.env.MAILER_USERNAME,
-//             pass: process.env.MAILER_PASS, // Use app-specific password if 2FA is enabled
-//         },
-//     });
-
-//     try {
-//         let info = await transporter.sendMail({
-//             from: '"sheryian" <mrsourabh05@gmail.com>', // sender address
-//             to: req.body.email, // list of receivers
-//             subject: "QUERY", // Subject line
-//             text: req.body.writeToUs, // plain text body
-//         });
-
-//         return res.redirect("/");
-//     } catch (error) {
-//         console.error('Error: ', error);
-//         return res.status(500).json({error: error.message});
-//     }
-// };
 const nodemailer = require("nodemailer");
 
 exports.sendmail=async (req,res)=>{
